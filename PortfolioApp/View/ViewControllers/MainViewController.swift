@@ -16,11 +16,14 @@ class MainViewController: UIViewController {
         delegates()
         viewControllerConfiguration()
         scrollViewConstraints()
+        backgroundViewConstraints()
+        topImageContainerConstraints()
+        photoViewConstraints()
         informationViewConstraints()
         editViewConstraints()
         collectionViewConstraints()
         aboutMeViewConstraints()
-        topViewConstraints()
+//        topViewConstraints()
         addAlertTextFieldAction()
     }
 
@@ -83,6 +86,26 @@ class MainViewController: UIViewController {
         return alert
     }()
     
+    private let topImageContainer: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor(named: "Gray")
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    private let image: UIImageView = {
+        let image = UIImageView(image: UIImage(named: "ProfilePhoto"))
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.contentMode = .scaleAspectFill
+        return image
+    }()
+    
+    private let backgroundView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor(named: "Gray")
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
 }
 
 // MARK: - Constraints
@@ -95,13 +118,37 @@ extension MainViewController {
         scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
     }
     
+    func topImageContainerConstraints() {
+        scrollView.addSubview(topImageContainer)
+        topImageContainer.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 0).isActive = true
+        topImageContainer.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
+        topImageContainer.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
+        topImageContainer.heightAnchor.constraint(equalToConstant: 150).isActive = true
+    }
+    
+    func backgroundViewConstraints() {
+        scrollView.addSubview(backgroundView)
+        backgroundView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true
+        backgroundView.bottomAnchor.constraint(equalTo: scrollView.topAnchor, constant: 0).isActive = true
+        backgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
+        backgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
+    }
+    
+    func photoViewConstraints() {
+        topImageContainer.addSubview(image)
+        image.trailingAnchor.constraint(equalTo: topImageContainer.trailingAnchor, constant: -127.5).isActive = true
+        image.leadingAnchor.constraint(equalTo: topImageContainer.leadingAnchor, constant: 127.5).isActive = true
+        image.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true
+        image.bottomAnchor.constraint(equalTo: topImageContainer.bottomAnchor, constant: 0).isActive = true
+    }
+    
     func informationViewConstraints() {
         scrollView.addSubview(informationView)
-        informationView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 24).isActive = true
+        informationView.topAnchor.constraint(equalTo: topImageContainer.bottomAnchor, constant: 0).isActive = true
         informationView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 0).isActive = true
         informationView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: 0).isActive = true
         informationView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor, constant: 0).isActive = true
-        informationView.heightAnchor.constraint(equalToConstant: 244).isActive = true
+        informationView.heightAnchor.constraint(equalToConstant: 130).isActive = true
     }
     
     func topViewConstraints() {
