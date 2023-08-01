@@ -67,6 +67,7 @@ extension AddSkillCollectionViewCell {
     }
 }
 
+// MARK: - Button Targets
 extension AddSkillCollectionViewCell {
     private func addTargets(){
         addButton.addTarget(self, action: #selector(addButtonTaped), for: .touchUpInside)

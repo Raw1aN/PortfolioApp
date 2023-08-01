@@ -72,9 +72,6 @@ extension InformationView {
 // MARK: - Initialize Func
     func initialize(){
         backgroundColor = UIColor(named: "Gray")
-//        addSubview(image)
-//        image.topAnchor.constraint(equalTo: topAnchor, constant: 0).isActive = true
-//        image.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 0).isActive = true
         addSubview(nameLabel)
         nameLabel.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 0).isActive = true
         nameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 16).isActive = true

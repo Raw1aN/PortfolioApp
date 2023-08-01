@@ -22,7 +22,6 @@
 		1B07C4322A79495200086675 /* MainCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B07C4312A79495200086675 /* MainCollectionView.swift */; };
 		1B07C4342A7967F600086675 /* MainEditingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B07C4332A7967F600086675 /* MainEditingCollectionViewCell.swift */; };
 		1B07C4362A796EF600086675 /* AddSkillCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B07C4352A796EF600086675 /* AddSkillCollectionViewCell.swift */; };
-		1B07C4432A79945E00086675 /* PhotoImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B07C4422A79945E00086675 /* PhotoImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +42,6 @@
 		1B07C4312A79495200086675 /* MainCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionView.swift; sourceTree = "<group>"; };
 		1B07C4332A7967F600086675 /* MainEditingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainEditingCollectionViewCell.swift; sourceTree = "<group>"; };
 		1B07C4352A796EF600086675 /* AddSkillCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSkillCollectionViewCell.swift; sourceTree = "<group>"; };
-		1B07C4422A79945E00086675 /* PhotoImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +138,6 @@
 				1B07C4252A792A8600086675 /* EditView.swift */,
 				1B07C42B2A7939CF00086675 /* AboutMeView.swift */,
 				1B07C4232A791EAC00086675 /* InformationView.swift */,
-				1B07C4422A79945E00086675 /* PhotoImageView.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -234,7 +231,6 @@
 				1B07C4302A79417900086675 /* MainNavigationController.swift in Sources */,
 				1B07C42A2A79348000086675 /* MainCollectionViewCell.swift in Sources */,
 				1B07C4342A7967F600086675 /* MainEditingCollectionViewCell.swift in Sources */,
-				1B07C4432A79945E00086675 /* PhotoImageView.swift in Sources */,
 				1B07C40E2A791CC200086675 /* AppDelegate.swift in Sources */,
 				1B07C4322A79495200086675 /* MainCollectionView.swift in Sources */,
 				1B07C4262A792A8600086675 /* EditView.swift in Sources */,

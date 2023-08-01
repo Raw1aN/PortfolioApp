@@ -19,7 +19,6 @@ class MainNavigationController: UINavigationController {
 // MARK: - Customization
 extension MainNavigationController{
     func customNavBar(){
-//        navigationBar.tintColor = UIColor(named: "Gray")
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.layoutIfNeeded()
